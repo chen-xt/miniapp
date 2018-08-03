@@ -1,0 +1,12 @@
+/* pages/try/try.wxss */
+.title {
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  text-align: center;
+  color: #212121;  
+}
+.changeBtn{
+  width: 40%;
+  color: #fff;
+  background: rgba(62,136,253,.8);
+}

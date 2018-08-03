@@ -1,0 +1,3 @@
+<!--pages/try/try.wxml-->
+<view class='title'> {{name}}! </view>
+<button class='changeBtn' bindtap="changeName"> click me! </button>
