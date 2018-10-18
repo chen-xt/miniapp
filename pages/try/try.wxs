@@ -1,0 +1,19 @@
+
+// module对象
+var foo = "测试文字";
+var bar = function (d) {
+  return d;
+}
+var a = 10;
+var b = 5;
+var num = a / b; //测试运算符
+
+var a1 = '.w', b1 = 'xs';
+
+module.exports = {
+  FOO: foo,
+  bar: bar,
+  msg: "哈哈",
+  num: num,
+  str: a1+b1
+};

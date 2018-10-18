@@ -1,3 +1,34 @@
 <!--pages/try/try.wxml-->
 <view class='title'> {{name}}! </view>
-<button class='changeBtn' bindtap="changeName"> click me! </button>
+<button class='changeBtn' bindtap="changeName" hover-class="gray"> click me! </button>
+
+
+<wxs module="msg">
+    var msg = "你好";
+    module.exports.message = msg;
+</wxs>
+<view class='msg'> {{msg.message}} </view>
+
+
+<!-- 下面的 getMax 函数，接受一个数组，且返回数组中最大的元素的值 -->
+<wxs module="m1">
+    var getMax = function(array) {
+      var max = undefined;
+      for (var i = 0; i < array.length; ++i) {
+        max = max === undefined ? 
+          array[i] : 
+          (max >= array[i] ? max : array[i]);
+      }
+      return max;
+    }
+    module.exports.getMax = getMax;
+</wxs>
+<!-- 调用 wxs 里面的 getMax 函数，参数为 page.js 里面的 array -->
+<view class='msg'> {{m1.getMax(array)}} </view>
+
+<!-- 引用module对象模块 -->
+<wxs src="./try.wxs" module="tools" />
+<view class='msg'> {{tools.FOO}} </view>
+<view class='msg'> {{tools.bar(tools.msg)}} </view>
+<view class='msg'> {{tools.num}} </view>
+<view class='msg'> {{tools.str}} </view>

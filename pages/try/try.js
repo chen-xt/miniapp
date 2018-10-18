@@ -1,18 +1,24 @@
 // pages/try/try.js
 Page({
-
+  onShow: function () {
+    console.log(this.route)
+  },
   /**
    * 页面的初始数据
    */
   data: {
     name: '测试点击事件',
+    array: [1, 2, 3, 4, 5, 1, 2, 3, 4]
   },
   // 点击事件
   changeName: function (e) {
     // sent data change to view
+    var appInstance = getApp()
+    console.log(appInstance.globalData.name) ////这边就可以取到那个值了
     this.setData({
-      name: '点击成功',
+      name: appInstance.globalData.name,
     })
+
   },
 
   /**

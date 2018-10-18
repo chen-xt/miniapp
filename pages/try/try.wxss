@@ -10,3 +10,10 @@
   color: #fff;
   background: rgba(62,136,253,.8);
 }
+.msg{
+  text-align: center;
+  margin-top: 30rpx;
+}
+.gray{
+  background: #efefef;
+}
