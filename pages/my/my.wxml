@@ -1,0 +1,32 @@
+
+<import src="../template/showToast.wxml" />
+<template is="showToast" data="{{showToast: showToast}}" />
+<view class="page-section">
+    <!-- 头部用户信息 -->
+    <view class='avatar'>
+        <image src="{{avatarUrl}}"></image>
+        <text>{{nickName}}</text>
+    </view>
+
+    <!-- 中间菜单入口 -->
+    <view class='menuList'>
+        <view class='menu' bindtap="scan">
+            <image src="../../images/scan.png"></image>
+            <text>扫码操作</text>
+        </view>
+        <view class='menu' bindtap="try">
+            <image src="../../images/try.png"></image>
+            <text>测试用例</text>
+        </view>
+        <view class='menu' bindtap="toast">
+            <image src="../../images/toast.png"></image>
+            <text>自定义showToast</text>
+        </view>
+        <view class='menu' bindtap="tab">
+            <image src="../../images/tab.png"></image>
+            <text>tab切换</text>
+        </view>
+    </view>
+
+
+</view>

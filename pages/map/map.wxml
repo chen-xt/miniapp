@@ -1,0 +1,51 @@
+
+<view class="container page-section">
+    <map
+      id="map"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      bindmarkertap="markerClick"
+      show-location
+      bindtap="hideModal"
+    >
+
+      <!-- 移动到当前位置 -->
+      <cover-view bindtap="moveToLocation" class="toLocation">
+          <cover-image src="../../images/toLocation.png" />
+      </cover-view>
+
+      <!-- 个人中心 -->
+      <cover-view bindtap="toPersonCenter" class="personCenter">
+          <cover-image src="../../images/personCenter.png" />
+      </cover-view>
+
+    </map>
+
+    <!-- 弹框 -->
+    <view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-content">
+            <view class='chargeInfo'>地址：  <text>泉州市丰泽区通港西街174号</text></view>
+            <view class='chargeInfo'>经度：  <text>24.88946</text></view>
+            <view class='chargeInfo'>纬度：  <text>118.613</text></view>
+        </view>
+        <view class="modal-footer">
+            <view bindtap="toGuide"> 
+                <image src="../../images/toGuide.png"></image>
+                导航
+            </view>
+        </view>
+    </view>
+
+</view>
+
+<!--授权框  -->
+<cover-view class='modelOne' hidden='{{modelOne}}'>
+  <cover-view class='modelOne-title'>
+      <cover-view>
+        <!-- <cover-view class='title'>授权用户信息</cover-view> -->
+        <cover-view class='texo'>同意授权获取用户信息</cover-view>
+      </cover-view>
+      <button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">授权</button>
+  </cover-view>
+</cover-view>

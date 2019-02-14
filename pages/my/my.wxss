@@ -1,0 +1,38 @@
+@import '../template/showToast.wxss';
+.avatar{
+    background: #575757;
+    padding: 60rpx;
+}
+.avatar image{
+    display: block;
+    margin: 0 auto;
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+.avatar text{
+    display: block;
+    margin-top: 30rpx;
+    color: #fff;
+    font-size: 34rpx;
+    text-align: center;
+}
+.menuList{
+    padding: 100rpx 0.5%;
+}
+.menu{
+    display: inline-block;
+    margin-bottom: 50rpx;
+    width: 33%;
+    text-align: center;
+}
+.menu image{
+    display: block;
+    margin: 20rpx auto;
+    width: 80rpx;
+    height: 80rpx;
+}
+.menu text{
+    color: #000;
+    font-size: 30rpx;
+}
